@@ -68,10 +68,15 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
 
   // Validate
   if (title === '' || author === '' || isbn === '') {
+    // Message, className in parathesis
     ui.showAlert('Please fill in all fields', 'error');
   } else {
     // Add book to list
     ui.addBookToList(book);
+
+    // Show Success
+    // Message, ClassName in parathesis
+    ui.showAlert('Book Added!', 'success');
 
     // Clear fields
     ui.clearFields();
