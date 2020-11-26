@@ -72,7 +72,6 @@ class Store {
   static displayBooks() {
     const books = Store.getBooks();
 
-    // is it foreach or forEach?
     books.forEach(function (book) {
       const ui = new UI();
 
@@ -91,6 +90,9 @@ class Store {
 
   static removeBook() {}
 }
+
+// DOM Load Event
+document.addEventListener('DOMContentLoaded', Store.displayBooks);
 
 // Event Listener for add book/submit book
 document.getElementById('book-form').addEventListener('submit', function (e) {
