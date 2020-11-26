@@ -69,7 +69,17 @@ class Store {
     return books;
   }
 
-  static displayBooks() {}
+  static displayBooks() {
+    const books = Store.getBooks();
+
+    // is it foreach or forEach?
+    books.forEach(function (book) {
+      const ui = new UI();
+
+      // Add book to UI
+      ui.addBookToList(book);
+    });
+  }
 
   static addBook(book) {
     const books = Store.getBooks();
